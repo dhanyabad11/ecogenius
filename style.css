@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(246, 250, 247);
+    background-image: url("https://c4.wallpaperflare.com/wallpaper/872/725/187/dark-forest-wallpaper-preview.jpg");
+}
+
+.chat_bx {
+    width: 400px;
+    height: 80vh;
+    background: #7b4444fff;
+    box-shadow: 0 0 20px rgb(0, 0, 0,.1);
+    border-radius: 8px;
+}
+
+.chat_bx nav {
+    width: 200%;
+    height: 13.5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #000000;
+    border-radius: 10px 10px 0 0;
+}
+.chat_bx nav img {
+    width: 100px;
+    border-radius: 10px 10px 0 0;
+}
+
+.chat_bx .btn {
+    color: #ab3b3b;
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+}
+.chat_bx .btn .button {
+    font-size: 12px;
+    font-weight: 600;
+    margin-left: 30px;
+    cursor: pointer;
+    transition: .3s linear;
+}
+.chat_bx .btn .button:hover {
+    transform: scale(1.2);
+}
+.chat_bx .btn .lan {
+    transform: scale(1.2);
+}
+
+.chat_bx section {
+    width: 100%;
+    height: 77.5%;
+    /* border: 1px solid #000; */
+    /* padding: 0  20px; */
+}
+.chat_bx section .loading{
+    width: 100%;
+    height: auto;
+    /* border: 1px solid #000; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+.chat_bx section .loading .load{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.chat_bx section .loading .load h6{
+    width: 8px;
+    height: 8px;
+    background: #010c42;
+    border-radius: 50%;
+    margin: 3px 5px;
+    animation:  load 1s linear infinite;
+}
+.chat_bx section .loading .load h6:nth-child(2){
+    animation-delay: .33s;
+}
+.chat_bx section .loading .load h6:nth-child(3){
+    animation-delay: .66s;
+}
+
+@keyframes load {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(5px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+.chat_bx section #history {
+    width: 100%;
+    height: 93%;
+    /* border: 1px solid #000; */
+    overflow-y: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+.chat_bx section #history::-webkit-scrollbar {
+    display: none;
+}
+
+.chat_bx section #history .qus_bx , .ans_bx {
+    width: 90%;
+    position: relative;
+    /* border: 1px solid #000; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+.chat_bx section #history .ans_bx {
+    justify-content: flex-start;
+}
+.chat_bx section #history  p{
+    width: 80%;
+    /* border: 1px solid #000; */
+    white-space: pre-wrap;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: 600;
+    word-break: break-all;
+    box-shadow: 5px 5px 10px rgb(0, 0, 0,.2) ,
+    inset 5px 5px 10px rgb(0, 0, 0,.2);
+    border-radius: 8px;
+}
+.chat_bx section #history .ans_bx p{
+    padding-bottom: 30px !important;
+}
+.chat_bx section #history .ans_bx i{
+    position: absolute;
+    bottom: 10px;
+    left: 72%;
+    cursor: pointer;
+}
+
+.chat_bx footer {
+    width: 200%;
+    height: 13.5%;
+    /* border: 1px solid #000; */
+    background: #090a11;
+    border-radius: 0 0 8px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.chat_bx footer .search {
+    padding: 8px 10px;
+    background: #e4d8d8;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgb(0, 0, 0,.5), inset 5px 5px 10px rgb(0, 0, 0,.5);
+    width: 170%;
+}
+.chat_bx footer .search input {
+    width: 800px;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+    font-weight: 600;
+    color: white;
+    background: #000000;
+    height: 25px;
+}
+.chat_bx footer .search i {
+    cursor: pointer;
+}
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    background-color: black;
+    color: #fff;
+}
